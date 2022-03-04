@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tobi">
+    <title>Fibonacci Generator</title>
+</head>
+<body>
+    <script>
+        let inTake = prompt("Enter a number Dear Client");
+        let fibonacciSeries = [];
+       
+
+        function fibonacciGenerator(n) 
+        {
+                    for (let anyNumber = 0; anyNumber < n; anyNumber++) {
+                    if (anyNumber == 0) {
+                        fibonacciSeries.push(0);
+                    }
+                    else if (anyNumber == 1) {
+                        fibonacciSeries.push(1);
+                    }
+                    else {
+                    let fibo = fibonacciSeries[anyNumber - 1] + fibonacciSeries[anyNumber - 2];
+                    fibonacciSeries.push(fibo);
+                    }
+            }
+                document.write(fibonacciSeries);        
+        }
+            
+        fibonacciGenerator(inTake);
+
+    </script>
+</body>
+</html>
